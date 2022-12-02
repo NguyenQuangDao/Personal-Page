@@ -50,7 +50,7 @@
           justify-content: center;
           text-align: center;
           .Name_from {
-            margin-top: calc(var(--height_component) / 20);
+            margin-top: calc(var(--height_component) / 40);
             font-size: var(--fontSize_song1);
             font-weight: bold;
             font-family: var(--fontFamily);
@@ -111,9 +111,15 @@
         border-radius: var(--boderRadius);
         box-shadow: var(--boxshadow_titleComeback);
         margin-top: 15px;
-        outline: none;
-        border: none;
-        padding-left: 15px;
+        .Search_Weather_input{
+          width: 100%;
+          height: 100%;
+          padding-left: 15px;
+          background-color: var(--background_avt);
+          border-radius: var(--boderRadius);
+          border: none;
+          outline: none;
+        }
       }
     }
 

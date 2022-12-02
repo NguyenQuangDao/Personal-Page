@@ -43,7 +43,7 @@
         #gitHub,
         #faceBook,
         #instaGram {
-          height: calc(var(--height_component) * 0.17);
+          height: calc(var(--height_component) * 0.18);
           margin: 8px;
           @include respond(phoneSmall) {
             margin: 5px;

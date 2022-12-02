@@ -97,19 +97,21 @@ function Weather() {
                             <div className="Weather_from">
                                 <div className="Name_Location">
                                     <div className="Note">
-                                        Hãy nhập bằng tiếng anh nếu là các khu vực khác Việt Nam
+                                        Hãy nhập bằng tên quốc tế nếu là các khu vực khác Việt Nam
                                     </div>
                                     <div class="dots-7"></div>
                                 </div>
                             </div>
+                            <div className="Search_Weather">
                             <input
                                 placeholder="Địa điểm ..."
-                                className="Search_Weather"
+                                className="Search_Weather_input"
                                 type="text"
                                 onChange={e => { setQuery(e.target.value) }}
                                 value={query}
                                 onKeyPress={search}
                             />
+                            </div>
                         </div>
                         <div className="Weather_Api">
                             <div className="Icon_Weather">
