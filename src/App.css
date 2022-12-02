@@ -15,7 +15,7 @@
 }
 :root {
   --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
-  --c: radial-gradient(farthest-side, currentColor 96%, #0000);
+  --c: radial-gradient(farthest-side, #269af2 96%, #0000);
   --background_avt: #fbfcff;
   --Backgroud_Song: #7bc2bc;
   --with_height_avt: 70px;
