@@ -1,0 +1,75 @@
+#TitleComback {
+  display: flex;
+  justify-content: center;
+  .Avata {
+    display: flex;
+    justify-content: center;
+    margin-top: calc(var(--with_height_avt));
+    width: 88vw;
+    height: 150px;
+    box-shadow: var(--boxshadow_titleComeback);
+    background-color: var(--background_avt);
+    border-radius: var(--boderRadius);
+    position: relative;
+    .Img_Avata {
+      position: absolute;
+      bottom: calc(var(--with_height_avt) + 35px);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: var(--background_avt);
+      border-radius: 50%;
+      box-shadow: var(--boxshadow_img_Avt);
+      #Avt_me {
+        user-select: none;
+        align-items: center;
+        width: var(--with_height_avt);
+        height: var(--with_height_avt);
+        background-size: cover;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .date_time {
+      display: flex;
+      justify-content: space-between;
+      .Date,
+      .Time {
+        margin-top: 10px;
+        font-size: var( --fontSize_title);
+        font-family: var( --fontFamily);
+        font-weight: 800;
+        color: #000
+      }
+      .Date {
+        position: absolute;
+        left: 15px;
+      }
+      .Time {
+        position: absolute;
+        right: 15px;
+      }
+    }
+    .Title {
+      text-align: center;
+      margin-top: calc(var(--with_height_avt) / 2 + 20px);
+      .title_name {
+        display: block;
+        font-family: var( --fontFamily);
+        font-weight: bold;
+        font-size: var( --fontSize_title);
+      }
+      .title_mail {
+        margin-top: 5px;
+        font-size: var( --fontSize_title);
+        font-family: var( --fontFamily);
+      }
+      .welcome {
+        margin-top: 3px;
+        font-size: var(--fontSize_title1);
+        font-family: var( --fontFamily);
+        font-weight: bold;
+      }
+    }
+  }
+}

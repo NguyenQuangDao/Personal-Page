@@ -1,0 +1,300 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
+@keyframes Horizontal {
+  40% {
+    width: calc((var(--with_component) * 1.2) * 0.25);
+  }
+  100% {
+    width: calc(var(--with_component) * 1.2);
+  }
+}
+@keyframes Rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+#Music {
+  width: 100%;
+  margin-top: 20px;
+  .Header_Music {
+    user-select: none;
+    margin-bottom: 20px;
+    .Choose_Music {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img {
+        width: var(--with_component);
+        height: var(--height_component);
+        background-color: var(--background_avt);
+        border-radius: var(--boderRadius);
+        box-shadow: var(--boxshadow_titleComeback);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+        position: relative;
+        .img_MoNo {
+          border-radius: var(--boderRadius50);
+          animation: Rotate 10s ease-out infinite;
+          margin-bottom: 10px;
+          width: calc(var(--with_component) / 5);
+          height: calc(var(--with_component) / 5);
+          @include respond(tablet) {
+            width: calc(var(--with_component) - 220px);
+            height: calc(var(--with_component) - 220px);
+          }
+          @include respond(phone) {
+            width: calc(var(--with_component) - 65px);
+            height: calc(var(--with_component) - 65px);
+          }
+        }
+        .bars-1{
+          left: 15px;
+        }
+        .bars-2{
+          right: 15px;
+        }
+        .bars-1,
+        .bars-2 {
+          position: absolute;
+          bottom: 20px;
+         
+          width: 25px;
+          height: calc(var(--height_component) / 8);
+          aspect-ratio: 0.75;
+          --c: no-repeat
+            linear-gradient(
+              60deg,
+              #f79533,
+              #f37055,
+              #ef4e7b,
+              #a166ab,
+              #5073b8,
+              #1098ad,
+              #07b39b,
+              #6fba82
+            );
+          background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+          background-size: 20% 50%;
+          animation: b5 1.2s infinite linear;
+        }
+        .Click_here_PlayMusic {
+          position: absolute;
+          bottom: 15px;
+          font-size: var(--fontSize_song3);
+          font-weight: bold;
+        }
+      }
+      .Choose_Music_title {
+        margin-left: 10px;
+        width: var(--with_component);
+        height: var(--height_component);
+        background-color: var(--background_avt);
+        border-radius: var(--boderRadius);
+        box-shadow: var(--boxshadow_titleComeback);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Choose_Music_p {
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 5px;
+          .Title_Name_Music {
+            font-weight: bold;
+            color: var(--colorActive);
+            font-size: var(--fontSize_song1);
+          }
+          .Title_Author_Music {
+            margin-top: 8px;
+            font-size: var(--fontSize_song3);
+            font-weight: 700;
+          }
+        }
+      }
+      .img:active,
+      .Choose_Music_title:active {
+        width: calc(var(--with_component) - 1vw);
+        height: calc(var(--height_component) - 1vw);
+      }
+    }
+  }
+  .Play_Music {
+    background-color: var(--background_avt);
+    height: calc(var(--height_component) * 2 / 3 - 10px);
+    box-shadow: var(--boxshadow1);
+  }
+  .Lists_PlayMusic {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    .Lists {
+      user-select: none;
+    }
+    .Header_Lists_PlayMusic {
+      height: calc(var(--height_component) * 1 / 3 - 5px);
+      width: calc(var(--with_component) * 2 + 20px);
+      background-color: var(--background_avt);
+      border-radius: var(--boderRadius);
+      box-shadow: var(--boxshadow_titleComeback);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .List_Check_Icon {
+        margin: 20px;
+        padding: 10px;
+        .List_Check {
+          color: #000;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+      .Caret_Icon {
+        margin: 20px;
+        padding: 10px;
+        .Caret_Left,
+        .Caret_Down {
+          font-size: 20px;
+        }
+      }
+      .List_Check_Icon:active,
+      .Caret_Icon:active {
+        color: var(--colorActive);
+      }
+      .Bar_Horizontal {
+        user-select: none;
+        width: calc((var(--with_component) * 1.2));
+        height: 10px;
+        border-radius: var(--boderRadius);
+        background: linear-gradient(
+          60deg,
+          #f79533,
+          #f37055,
+          #ef4e7b,
+          #a166ab,
+          #5073b8,
+          #1098ad,
+          #07b39b,
+          #6fba82
+        );
+      }
+      .Horizontal {
+        animation: Horizontal 1.75s ease-out infinite;
+      }
+    }
+  }
+  .Lists_Music {
+    width: var(--with_component1);
+    height: 300px;
+    margin: 0 auto;
+    background-color: var(--background_avt);
+    border-radius: var(--boderRadius);
+    box-shadow: var(--boxshadow_titleComeback);
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .Lists {
+      .My_song {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+        width: calc(var(--with_component1) - 30px);
+        border-bottom: 1px solid #ccc;
+        .index_song,
+        .name_song,
+        .author_song,
+        .downLoad_song {
+          cursor: pointer;
+          color: #000;
+          font-size: var(--fontSize_song);
+        }
+        .index_song {
+          width: fit-content;
+          color: var(--colorActive);
+          font-weight: bold;
+        }
+        .Name_mySong {
+          display: flex;
+          justify-content: flex-start;
+          .name_song {
+            margin-left: 15px;
+            min-width: calc((var(--with_component1) - 30px) * 0.5);
+            font-weight: bold;
+          }
+        }
+        .Author_Mysong {
+          .author_song {
+            color: var(--colorActive);
+            margin: 15px;
+          }
+        }
+        .DownLoad_Mysong {
+          margin: 0 15px;
+          .downLoad_song {
+            width: fit-content;
+          }
+        }
+      }
+      .Backgroud_My_Song {
+        background-color: var(--Backgroud_Song);
+      }
+    }
+  }
+
+  // animation
+  .active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 0.5s ease;
+  }
+  .inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-80px);
+    transition: 0.5s ease;
+  }
+  .active1 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition: 0.75s ease;
+  }
+  .inactive1 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: 0.75s ease;
+  }
+  .active2 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition: 0.75s ease;
+  }
+  .inactive2 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: 0.75s ease;
+  }
+}

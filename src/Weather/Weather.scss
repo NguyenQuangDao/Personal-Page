@@ -1,0 +1,216 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
+@keyframes b5 {
+  20% {
+    background-position: 0% 50%, 50% 100%, 100% 100%;
+  }
+  40% {
+    background-position: 0% 0%, 50% 50%, 100% 100%;
+  }
+  60% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  80% {
+    background-position: 0% 100%, 50% 100%, 100% 0%;
+  }
+}
+
+#Weather {
+  margin: 35px auto 35px auto;
+  width: var(--with_component1);
+  .Weather_Header {
+    display: flex;
+    justify-content: space-between;
+    .Weather_Location {
+      user-select: none;
+      .Weather_from {
+        width: var(--with_component);
+        height: calc(var(--height_component) * 2 / 3 - 5px);
+        background-color: var(--background_avt);
+        border-radius: var(--boderRadius);
+        box-shadow: var(--boxshadow_titleComeback);
+        position: relative;
+        .Name_Location {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          .Name_from {
+            margin-top: calc(var(--height_component) / 20);
+            font-size: var(--fontSize_song1);
+            font-weight: bold;
+            font-family: var(--fontFamily);
+          }
+          .Note {
+            margin: 15px 10px 0px 10px;
+            font-size: var(--fontSize_title);
+            font-weight: bold;
+            font-family: var(--fontFamily);
+          }
+          .dots-7 {
+            position: absolute;
+            bottom: 20px;
+            width: 45px;
+            aspect-ratio: 4;
+            --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+            background: 
+              var(--_g) 0%   50%,
+              var(--_g) 50%  50%,
+              var(--_g) 100% 50%;
+            background-size: calc(100%/3) 100%;
+            animation: d7 1s infinite linear;
+          }
+          @keyframes d7 {
+              33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+              50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+              66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+          }
+         
+        }
+        .Parameter {
+          display: flex;
+          justify-content: center;
+          .Parameter_all {
+            .foresight,
+            .wind_speed,
+            .humidity {
+              display: flex;
+              margin-top: calc(var(--height_component) / 18);
+            }
+            .icon_parameter {
+              color: var(--colorActive);
+            }
+            .foresight {
+              margin-top: 5px;
+            }
+            .text_foresight {
+              margin-left: calc(var(--with_component) / 6.5);
+              line-height: 15px;
+            }
+          }
+        }
+      }
+      .Search_Weather {
+        width: var(--with_component);
+        height: calc(var(--height_component) * 1 / 3 - 10px);
+        background-color: var(--background_avt);
+        border-radius: var(--boderRadius);
+        box-shadow: var(--boxshadow_titleComeback);
+        margin-top: 15px;
+        outline: none;
+        border: none;
+        padding-left: 15px;
+      }
+    }
+
+    .Weather_Api {
+      width: var(--with_component);
+      height: var(--height_component);
+      user-select: none;
+      background-color: var(--background_avt);
+      border-radius: var(--boderRadius);
+      box-shadow: var(--boxshadow_titleComeback);
+      .Icon_Weather {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+        .icon_cloud {
+          font-size: var(--fontSize_Icon_Weather);
+          color: var(--colorActive);
+        }
+        .icon_weather {
+          width: calc(var(--with_component) / 7);
+          height: calc(var(--with_component) / 7);
+          object-fit: cover;
+          opacity: 0.5;
+          @include respond(tablet) {
+            width: calc(var(--with_component) / 4);
+            height: calc(var(--with_component) / 4);
+          }
+          @include respond(phone) {
+            width: calc(var(--with_component) / 2);
+            height: calc(var(--with_component) / 2);
+          }
+        }
+      }
+      .Comment {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .Comment_text {
+          font-size: var(--fontSize_song);
+          color: var(--colorActive);
+          font-family: var(--fontFamily);
+          margin: -10px 10px 0 10px;
+        }
+        .Comment_text_none {
+          font-size: var(--fontSize_song);
+          color: var(--colorActive);
+          font-family: var(--fontFamily);
+          margin: 15px 10px 0 10px;
+        }
+      }
+      .Temperature {
+        display: flex;
+        justify-content: center;
+        .degC {
+          font-size: var(--fontSize_title1);
+          font-weight: bold;
+          font-family: var(--fontFamily);
+          image-rendering: pixelated;
+        }
+      }
+      .H_or_L_Temperature {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .H_or_L {
+          font-size: var(--fontSize_title);
+          color: var(--colorActive);
+          font-family: var(--fontFamily);
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  .pulsing-7 {
+    width: 80px;
+    height: 50px;
+    margin-top: calc(var(--height_component) / 10);
+    color: #269af2;
+    --c: radial-gradient(farthest-side, currentColor 96%, #0000);
+    background: var(--c) 100% 100% /30% 60%, var(--c) 70% 0 /50% 100%,
+      var(--c) 0 100% /36% 68%, var(--c) 27% 18% /26% 40%,
+      linear-gradient(currentColor 0 0) bottom/67% 58%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .pulsing-7:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.4;
+    animation: pl7 1.5s infinite;
+  }
+  @keyframes pl7 {
+    to {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+}

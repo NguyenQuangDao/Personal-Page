@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#App {
+  width: 94%;
+  /* height: 100%; */
+  margin: 10px auto;
+  padding-bottom: 20px;
+  background-color: #f1f2f689;
+  border-radius: 14px;
+  scroll-behavior: smooth;
+  overflow-x:hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+  --background_avt: #fbfcff;
+  --Backgroud_Song: #7bc2bc;
+  --with_height_avt: 70px;
+  --height_component: 200px;
+  --with_component: calc(44vw - 10px);
+  --with_component1: 88vw;
+  --background_title_avt: #f1f2f689;
+  --boderRadius: 18px;
+  --boderRadius50: 50%;
+  --borderWidth: 3px;
+  --boxshadow_titleComeback: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --boxshadow1: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  --boxshadow_img_Avt: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  --fontSize_title: 0.75rem;
+  --fontSize_title1: 2.15rem;
+  --fontSize_song: 0.95rem;
+  --fontSize_song1: 1.1rem;
+  --fontSize_song2: 1.4rem;
+  --fontSize_song3: 1.15rem;
+  --fontSize_Icon_Weather: 3.5rem;
+  --fontFamily: Arial, Helvetica, sans-serif;
+  --colorActive: #848482;
 }
