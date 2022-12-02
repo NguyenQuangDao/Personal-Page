@@ -43,7 +43,7 @@
         #gitHub,
         #faceBook,
         #instaGram {
-          height: calc(var(--height_component) * 0.18);
+          height: calc(var(--height_component) * 0.2);
           margin: 8px;
           @include respond(phoneSmall) {
             margin: 5px;
@@ -91,9 +91,7 @@
         padding: 10px;
       }
       .phone_profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
         .phone {
           display: flex;
           width: fit-content;
@@ -116,9 +114,8 @@
           line-height: var(--fontSize_song1);
           position: absolute;
           left: 100%;
-          // margin-top: 23px;
-          margin-bottom: 10px;
-          margin-left: calc(var(--height_component) * 0.15);
+          margin-top: 10px;
+          // margin-left: calc(var(--height_component) * 0.15);
           // .bank_MB {
           //   font-weight: bold;
           // }
@@ -149,6 +146,7 @@
       opacity: 1;
       visibility: visible;
       transition: 0.5s ease;
+      margin: 5px;
     }
     .closeNameAndBank {
       opacity: 0;
