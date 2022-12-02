@@ -60,14 +60,16 @@ function Weather() {
                                     </div>
                                 </div>
                             </div>
-                            <input
-                                placeholder="Địa điểm ..."
-                                className="Search_Weather"
-                                type="text"
-                                onChange={e => { setQuery(e.target.value) }}
-                                value={query}
-                                onKeyPress={search}
-                            />
+                            <div className="Search_Weather">
+                                <input
+                                    placeholder="Địa điểm ..."
+                                    className="Search_Weather_input"
+                                    type="text"
+                                    onChange={e => { setQuery(e.target.value) }}
+                                    value={query}
+                                    onKeyPress={search}
+                                />
+                            </div>
                         </div>
 
                         <div className="Weather_Api">
@@ -103,14 +105,14 @@ function Weather() {
                                 </div>
                             </div>
                             <div className="Search_Weather">
-                            <input
-                                placeholder="Địa điểm ..."
-                                className="Search_Weather_input"
-                                type="text"
-                                onChange={e => { setQuery(e.target.value) }}
-                                value={query}
-                                onKeyPress={search}
-                            />
+                                <input
+                                    placeholder="Địa điểm ..."
+                                    className="Search_Weather_input"
+                                    type="text"
+                                    onChange={e => { setQuery(e.target.value) }}
+                                    value={query}
+                                    onKeyPress={search}
+                                />
                             </div>
                         </div>
                         <div className="Weather_Api">
