@@ -122,7 +122,7 @@ function Weather() {
                             </div>
                             <div className="H_or_L_Temperature">
                                 <div className="H_or_L">
-                                    ( hãy nhập đúng tên nơi bạn muốn tìm )
+                                    {/* ( hãy nhập đúng tên nơi bạn muốn tìm ) */}
                                 </div>
                             </div>
                         </div>
