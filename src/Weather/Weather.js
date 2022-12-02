@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Weather.scss'
 import { Context } from '../Context';
+import imgCloud from '../img/cloud_With_sun.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -40,7 +41,6 @@ function Weather() {
                                 <div className="Name_Location">
                                     <div className="Name_from">
                                         {weather.name}
-
                                     </div>
                                 </div>
                                 <div className="Parameter">
@@ -101,7 +101,7 @@ function Weather() {
                                     <div className="Note">
                                         Hãy nhập bằng tên quốc tế nếu là các khu vực khác Việt Nam
                                     </div>
-                                    <div class="dots-7"></div>
+                                    <div className="dots-7"></div>
                                 </div>
                             </div>
                             <div className="Search_Weather">
@@ -117,7 +117,9 @@ function Weather() {
                         </div>
                         <div className="Weather_Api">
                             <div className="Icon_Weather">
-                                <div class="pulsing-7"></div>
+                                <div className="Cloud_svg">
+                                    <img src={imgCloud} id="Cloud_svg" />
+                                </div>
                             </div>
                             <div className="Comment">
                                 <div className="Comment_text_none">

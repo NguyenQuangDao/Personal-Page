@@ -61,6 +61,7 @@
             font-weight: bold;
             font-family: var(--fontFamily);
           }
+         
         }
         .Parameter {
           display: flex;
@@ -117,6 +118,10 @@
         .icon_cloud {
           font-size: var(--fontSize_Icon_Weather);
           color: var(--colorActive);
+        }
+        #Cloud_svg{
+          width: 70px;
+          height: 70px;
         }
         .icon_weather {
           width: calc(var(--with_component) / 7);
@@ -197,29 +202,29 @@
         calc(100% / 3) 0%;
     }
   }
-  .pulsing-7 {
-    width: 80px;
-    height: 50px;
-    margin-top: calc(var(--height_component) / 10);
-    color: #269af2;
-    background: var(--c) 100% 100% /30% 60%, var(--c) 70% 0 /50% 100%,
-      var(--c) 0 100% /36% 68%, var(--c) 27% 18% /26% 40%,
-      linear-gradient(#269af2 0 0) bottom/67% 58%;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-  .pulsing-7:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    opacity: 0.4;
-    animation: pl7 1.5s infinite;
-  }
-  @keyframes pl7 {
-    to {
-      transform: scale(1.6);
-      opacity: 0;
-    }
-  }
+  // .pulsing-7 {
+  //   width: 80px;
+  //   height: 50px;
+  //   margin-top: calc(var(--height_component) / 10);
+  //   color: #269af2;
+  //   background: var(--c) 100% 100% /30% 60%, var(--c) 70% 0 /50% 100%,
+  //     var(--c) 0 100% /36% 68%, var(--c) 27% 18% /26% 40%,
+  //     linear-gradient(#269af2 0 0) bottom/67% 58%;
+  //   background-repeat: no-repeat;
+  //   position: relative;
+  // }
+  // .pulsing-7:after {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   background: inherit;
+  //   opacity: 0.4;
+  //   animation: pl7 1.5s infinite;
+  // }
+  // @keyframes pl7 {
+  //   to {
+  //     transform: scale(1.6);
+  //     opacity: 0;
+  //   }
+  // }
 }
