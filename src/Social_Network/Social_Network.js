@@ -24,14 +24,19 @@ function Social_Network() {
                     <div className='Social_text' onClick={handleSoial}>
                         Social
                     </div>
-                    <div className={`phone  ${openSocial ? 'openNameAndBank' : 'closeNameAndBank'}`}>
-                        <FontAwesomeIcon icon="fa-solid fa-phone-volume" />
-                        <p className="number_phone">0973397126</p>
-                    </div>
-                    <div className={`bank  ${openSocial ? 'openNameAndBank' : 'closeNameAndBank'}`}>
-                        {/* <FontAwesomeIcon icon="fa-solid fa-building-columns" /> */}
-                        <div className="bank_MB" >MB </div>
-                        <div className='number_bank' >222920039999</div>
+                    <div className="phone_profile">
+
+                        <div className={`phone  ${openSocial ? 'openNameAndBank' : 'closeNameAndBank'}`}>
+                            <FontAwesomeIcon icon="fa-solid fa-phone-volume" />
+                            <p className="number_phone">0973397126</p>
+                        </div>
+                        <div className={`bank  ${openSocial ? 'openNameAndBank' : 'closeNameAndBank'}`}>
+                            {/* <FontAwesomeIcon icon="fa-solid fa-building-columns" /> */}
+                            {/* <div className="bank_MB" >MB </div>
+                        <div className='number_bank' >222920039999</div> */}
+                            <FontAwesomeIcon icon="fa-solid fa-user" />
+                            <a href="https://nguyenquangdao.github.io/Profilecuatoi/" className="My_Profile">My_Profile</a>
+                        </div>
                     </div>
                 </div>
 

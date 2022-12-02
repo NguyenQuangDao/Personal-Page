@@ -78,7 +78,7 @@
       width: calc(var(--with_component1) * 0.25);
       height: calc(var(--height_component) * 0.2);
       background-color: var(--background_avt);
-      border-radius: var(--boderRadius);
+      border-radius: 10px;
       box-shadow: var(--boxshadow_titleComeback);
       margin-right: calc(var(--height_component) * 0.15);
       display: flex;
@@ -90,39 +90,46 @@
         font-weight: bold;
         padding: 10px;
       }
-
-      .phone {
-        display: flex;
-        width: fit-content;
-        line-height: var(--fontSize_song1);
-        position: absolute;
-        left: 100%;
-        margin-left: calc(var(--height_component) * 0.15);
-        margin-bottom: 10px;
-        .number_phone {
-          user-select: all;
-          margin-left: 19px;
-          font-size: var(--fontSize_song1);
-        }
-      }
-      .bank {
-        width: calc(var(--with_component1) * 0.625);
+      .phone_profile {
         display: flex;
         justify-content: center;
-        width: fit-content;
-        line-height: var(--fontSize_song1);
-        position: absolute;
-        left: 100%;
-        margin-top: 23px;
-        margin-bottom: 10px;
-        margin-left: calc(var(--height_component) * 0.15);
-        .bank_MB {
-          font-weight: bold;
+        align-items: center;
+        .phone {
+          display: flex;
+          width: fit-content;
+          line-height: var(--fontSize_song1);
+          position: absolute;
+          left: 100%;
+          margin-left: calc(var(--height_component) * 0.15);
+          margin-bottom: 10px;
+          .number_phone {
+            user-select: all;
+            margin-left: 20px;
+            font-size: var(--fontSize_song1);
+          }
         }
-        .number_bank {
-          user-select: all;
-          margin-left: 10px;
-          font-size: var(--fontSize_song1);
+        .bank {
+          width: calc(var(--with_component1) * 0.625);
+          display: flex;
+          justify-content: center;
+          width: fit-content;
+          line-height: var(--fontSize_song1);
+          position: absolute;
+          left: 100%;
+          margin-top: 23px;
+          margin-bottom: 10px;
+          margin-left: calc(var(--height_component) * 0.15);
+          // .bank_MB {
+          //   font-weight: bold;
+          // }
+          // .number_bank {
+          //   user-select: all;
+          //   margin-left: 10px;
+          //   font-size: var(--fontSize_song1);
+          // }
+          .My_Profile {
+            margin-left: 20px;
+          }
         }
       }
     }

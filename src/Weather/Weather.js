@@ -121,7 +121,7 @@ function Weather() {
                             </div>
                             <div className="Comment">
                                 <div className="Comment_text_none">
-                                    Hãy nhập vị trí bạn muốn xem thời tiết
+                                    Hãy nhập vị trí bạn muốn xem thời tiết (VD: hà nội)
                                 </div>
                             </div>
                             <div className="H_or_L_Temperature">

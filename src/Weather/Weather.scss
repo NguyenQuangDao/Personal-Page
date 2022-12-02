@@ -61,25 +61,6 @@
             font-weight: bold;
             font-family: var(--fontFamily);
           }
-          .dots-7 {
-            position: absolute;
-            bottom: 20px;
-            width: 45px;
-            aspect-ratio: 4;
-            --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
-            background: 
-              var(--_g) 0%   50%,
-              var(--_g) 50%  50%,
-              var(--_g) 100% 50%;
-            background-size: calc(100%/3) 100%;
-            animation: d7 1s infinite linear;
-          }
-          @keyframes d7 {
-              33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
-              50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
-              66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
-          }
-         
         }
         .Parameter {
           display: flex;
@@ -111,7 +92,7 @@
         border-radius: var(--boderRadius);
         box-shadow: var(--boxshadow_titleComeback);
         margin-top: 15px;
-        .Search_Weather_input{
+        .Search_Weather_input {
           width: 100%;
           height: 100%;
           padding-left: 15px;
@@ -192,12 +173,35 @@
       }
     }
   }
+  .dots-7 {
+    position: absolute;
+    bottom: 8px;
+    width: 45px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+    background-size: calc(100% / 3) 100%;
+    animation: d7 1.5s infinite linear;
+  }
+  @keyframes d7 {
+    33% {
+      background-size: calc(100% / 3) 0%, calc(100% / 3) 100%,
+        calc(100% / 3) 100%;
+    }
+    50% {
+      background-size: calc(100% / 3) 100%, calc(100% / 3) 0%,
+        calc(100% / 3) 100%;
+    }
+    66% {
+      background-size: calc(100% / 3) 100%, calc(100% / 3) 100%,
+        calc(100% / 3) 0%;
+    }
+  }
   .pulsing-7 {
     width: 80px;
     height: 50px;
     margin-top: calc(var(--height_component) / 10);
     color: #269af2;
-    --c: radial-gradient(farthest-side, currentColor 96%, #0000);
     background: var(--c) 100% 100% /30% 60%, var(--c) 70% 0 /50% 100%,
       var(--c) 0 100% /36% 68%, var(--c) 27% 18% /26% 40%,
       linear-gradient(currentColor 0 0) bottom/67% 58%;

@@ -14,6 +14,8 @@
   overflow-x: hidden;
 }
 :root {
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  --c: radial-gradient(farthest-side, currentColor 96%, #0000);
   --background_avt: #fbfcff;
   --Backgroud_Song: #7bc2bc;
   --with_height_avt: 70px;
@@ -24,8 +26,7 @@
   --boderRadius: 18px;
   --boderRadius50: 50%;
   --borderWidth: 3px;
-  --boxshadow_titleComeback: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --boxshadow_titleComeback: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   --boxshadow1: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
   --boxshadow2: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
