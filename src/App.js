@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header/Header';
 import TitleComback from './TItle_comback/TItle_comback';
 import Weather from './Weather/Weather';
+import Social_Network from './Social_Network/Social_Network';
 import Music from './Music/Music';
 import { Context } from './Context';
 import DataSongs from './/Data/Data.json'
@@ -47,6 +48,7 @@ function App() {
         <Header />
         <TitleComback />
         <Weather />
+        <Social_Network/>
         <Music />
       </Context.Provider>
     </div>

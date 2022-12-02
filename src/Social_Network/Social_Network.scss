@@ -1,0 +1,154 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phoneSmall {
+    @media (max-width: 330px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
+#Social_Network {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  .Network {
+    width: var(--with_component1);
+    height: calc(var(--height_component) * 0.4);
+    background-color: var(--background_avt);
+    border-radius: var(--boderRadius);
+    box-shadow: var(--boxshadow_titleComeback);
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .Social_icon_all {
+      width: calc(var(--with_component1) * 0.7);
+      display: flex;
+      justify-content: center;
+      .Social_icon {
+        #linkedin,
+        #gitHub,
+        #faceBook,
+        #instaGram {
+          height: calc(var(--height_component) * 0.2);
+          margin: 8px;
+          @include respond(phoneSmall) {
+            margin: 5px;
+          }
+          cursor: pointer;
+        }
+        #linkedin {
+          color: #0a66c2;
+        }
+        #gitHub {
+          color: black;
+        }
+        #instaGram {
+          color: #ef4f6d;
+        }
+      }
+      .openSocial_icon {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+      }
+      .closeSocial_icon {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        transition: 0.5s ease;
+      }
+    }
+    .Social {
+      cursor: pointer;
+      width: calc(var(--with_component1) * 0.3);
+      height: calc(var(--height_component) * 0.25);
+      background-color: var(--background_avt);
+      border-radius: var(--boderRadius);
+      box-shadow: var(--boxshadow_titleComeback);
+      margin-right: calc(var(--height_component) * 0.075);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .Social_text {
+        font-size: var(--fontSize_song3);
+        font-family: var(--fontFamily);
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .phone {
+        display: flex;
+        width: fit-content;
+        line-height: var(--fontSize_song1);
+        position: absolute;
+        left: 100%;
+        margin-left: calc(var(--height_component) * 0.15);
+        margin-bottom: 15px;
+        margin-top: 10px;
+        .number_phone {
+          user-select: all;
+          margin-left: 19px;
+          font-size: var(--fontSize_song1);
+        }
+      }
+      .bank {
+        width: calc(var(--with_component1) * 0.625);
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        line-height: var(--fontSize_song1);
+        position: absolute;
+        left: 100%;
+        margin-top: 22px;
+        margin-left: calc(var(--height_component) * 0.15);
+        .bank_MB {
+          font-weight: bold;
+        }
+        .number_bank {
+          user-select: all;
+          margin-left: 10px;
+          font-size: var(--fontSize_song1);
+        }
+      }
+    }
+    .openSocial {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(calc(var(--with_component1) * -0.625));
+      transition: 0.5s ease;
+    }
+    .closeSoial {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+      transition: 0.5s ease;
+    }
+    .openNameAndBank {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.5s ease;
+    }
+    .closeNameAndBank {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-100%);
+      transition: 0.5s ease;
+    }
+  }
+}

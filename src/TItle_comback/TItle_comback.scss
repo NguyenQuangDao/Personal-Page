@@ -54,17 +54,20 @@
       text-align: center;
       margin-top: calc(var(--with_height_avt) / 2 + 20px);
       .title_name {
+        user-select: all;
         display: block;
         font-family: var( --fontFamily);
         font-weight: bold;
         font-size: var( --fontSize_title);
       }
       .title_mail {
+        user-select: all;
         margin-top: 5px;
         font-size: var( --fontSize_title);
         font-family: var( --fontFamily);
       }
       .welcome {
+        user-select: none;
         margin-top: 3px;
         font-size: var(--fontSize_title1);
         font-family: var( --fontFamily);

@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Weather.scss'
-import axios from "axios";
 import { Context } from '../Context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -27,7 +26,6 @@ function Weather() {
                 .then(result => {
                     setWeather(result)
                     setQuery("")
-                    console.log(result);
                 })
         }
     }

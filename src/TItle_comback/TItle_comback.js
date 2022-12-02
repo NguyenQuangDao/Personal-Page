@@ -13,7 +13,7 @@ function TitleComback(props) {
         setCtime(time);
     }
     setInterval(updateTime, 1000);
-    
+
     //////// date ///////
     // const DateBuilder = (d) => {
     //     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

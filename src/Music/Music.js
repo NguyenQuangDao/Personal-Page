@@ -74,10 +74,10 @@ function Music() {
                         <tr key={song.id} className={`My_song ${idSong === song.id ? 'Backgroud_My_Song' : ''}`}
                             onClick={() => handelePlaySong(song.id)}
                         >
-                            <td className="index_song">{song.id + 1}</td>
+                            <td className="index_song">{index + 1}</td>
                             <div className="Name_mySong"> <td className="name_song">{song.name}</td></div>
                             <div className="Author_Mysong"> <td className="author_song">{song.author}</td></div>
-                     
+
                             <div className="DownLoad_Mysong">
                                 <td className="downLoad_song">
                                     <a href={song.url}>
