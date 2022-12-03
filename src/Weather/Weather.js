@@ -30,6 +30,27 @@ function Weather() {
                 })
         }
     }
+
+    ////////// search location //////////
+    const geoApiOptions = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'ac3b21571fmshb391cae8c53a3d9p1d2119jsn2a76164dbe69',
+            'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+        }
+    };
+
+    // export const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo";
+
+    
+    const handleInputValue = (valueInput) => {
+        setQuery(valueInput)
+        // fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?mninPopulation=100000&namePrefix=${valueInput}`, geoApiOptions)
+        //     .then(response => response.json())
+        //     .then(response => console.log(response))
+        //     .catch(err => console.error(err));
+    }
+
     return (
         <div id="Weather">
             <div className="Weather_Header">
@@ -65,7 +86,7 @@ function Weather() {
                                     placeholder="Địa điểm ..."
                                     className="Search_Weather_input"
                                     type="text"
-                                    onChange={e => { setQuery(e.target.value) }}
+                                    onChange={e => { handleInputValue(e.target.value) }}
                                     value={query}
                                     onKeyPress={search}
                                 />
@@ -83,12 +104,12 @@ function Weather() {
                             </div>
                             <div className="Temperature">
                                 <div className="degC">
-                                    {Math.round(weather.main.temp - 273)}&deg;C
+                                    {Math.round(weather.main.temp - 273.15)}&deg;C
                                 </div>
                             </div>
                             <div className="H_or_L_Temperature">
                                 <div className="H_or_L">
-                                    H {Math.round(weather.main.temp_max - 273)}&deg;C /L {Math.round(weather.main.temp_min - 273)}&deg;C
+                                    H {Math.round(weather.main.temp_max - 273.15)}&deg;C /L {Math.round(weather.main.temp_min - 273.15)}&deg;C
                                 </div>
                             </div>
                         </div>
@@ -109,7 +130,7 @@ function Weather() {
                                     placeholder="Địa điểm ..."
                                     className="Search_Weather_input"
                                     type="text"
-                                    onChange={e => { setQuery(e.target.value) }}
+                                    onChange={e => { handleInputValue(e.target.value) }}
                                     value={query}
                                     onKeyPress={search}
                                 />

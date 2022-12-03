@@ -115,10 +115,11 @@
       .Icon_Weather {
         display: flex;
         justify-content: center;
-        .icon_cloud {
-          font-size: var(--fontSize_Icon_Weather);
-          color: var(--colorActive);
-        }
+        margin-top: 8px;
+        // .icon_cloud {
+        //   font-size: var(--fontSize_Icon_Weather);
+        //   color: var(--colorActive);
+        // }
         #Cloud_svg{
           width: 70px;
           height: 70px;
@@ -152,7 +153,7 @@
           font-size: var(--fontSize_song);
           color: var(--colorActive);
           font-family: var(--fontFamily);
-          margin: 15px 10px 0 10px;
+          margin: 6px 10px 0 10px;
         }
       }
       .Temperature {
