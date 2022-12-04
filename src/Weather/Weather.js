@@ -11,14 +11,35 @@ import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 function Weather() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState('');
+    // const [dataLocation, setDataLocation] = useState([])
     const WeatherAPI = {
         key: "8f53e78d116048d874bdd203efab0835",
         apiURL: " https://api.openweathermap.org/data/2.5/",
     }
     ////////// removeAccents ///////////
     function removeAccents(str) {
-        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-    }
+        var AccentsMap = [
+          "aàảãáạăằẳẵắặâầẩẫấậ",
+          "AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬ",
+          "dđ", "DĐ",
+          "eèẻẽéẹêềểễếệ",
+          "EÈẺẼÉẸÊỀỂỄẾỆ",
+          "iìỉĩíị",
+          "IÌỈĨÍỊ",
+          "oòỏõóọôồổỗốộơờởỡớợ",
+          "OÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢ",
+          "uùủũúụưừửữứự",
+          "UÙỦŨÚỤƯỪỬỮỨỰ",
+          "yỳỷỹýỵ",
+          "YỲỶỸÝỴ"    
+        ];
+        for (var i=0; i<AccentsMap.length; i++) {
+          var re = new RegExp('[' + AccentsMap[i].substr(1) + ']', 'g');
+          var char = AccentsMap[i][0];
+          str = str.replace(re, char);
+        }
+        return str.trim();
+      }
     //// search location weather //////
     const search = evt => {
         if (evt.key === "Enter") {
@@ -32,23 +53,23 @@ function Weather() {
     }
 
     ////////// search location //////////
-    const geoApiOptions = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'ac3b21571fmshb391cae8c53a3d9p1d2119jsn2a76164dbe69',
-            'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
-        }
-    };
-
-    // export const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo";
-
-    
+    // const geoApiOptions = {
+    //     method: 'GET',
+    //     headers: {
+    //         'X-RapidAPI-Key': 'ac3b21571fmshb391cae8c53a3d9p1d2119jsn2a76164dbe69',
+    //         'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+    //     }
+    // };
     const handleInputValue = (valueInput) => {
-        setQuery(valueInput)
-        // fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?mninPopulation=100000&namePrefix=${valueInput}`, geoApiOptions)
+        // fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?&minPopulation=500000&limit=10&location=%2B41.40338%2B2.17403&asciiMode=true&namePrefix=${valueInput}`, geoApiOptions)
         //     .then(response => response.json())
-        //     .then(response => console.log(response))
+        //     .then(response => {
+        //          setDataLocation(response.data) 
+        //          console.log(response);
+        //     })
         //     .catch(err => console.error(err));
+            // setWeather(dataLocatio)
+        setQuery(valueInput)
     }
 
     return (
@@ -120,7 +141,7 @@ function Weather() {
                             <div className="Weather_from">
                                 <div className="Name_Location">
                                     <div className="Note">
-                                        Hãy nhập bằng tên quốc tế nếu là các khu vực khác Việt Nam
+                                        1 số nơi có thể không chứa dấu cách (VD: HaiPhong, BaVi)
                                     </div>
                                     <div className="dots-7"></div>
                                 </div>

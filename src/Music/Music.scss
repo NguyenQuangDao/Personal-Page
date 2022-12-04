@@ -138,6 +138,7 @@
     }
   }
   .Play_Music {
+    user-select: none;
     background-color: var(--background_avt);
     height: calc(var(--height_component) * 2 / 3 - 10px);
     box-shadow: var(--boxshadow1);
