@@ -1,6 +1,7 @@
 #TitleComback {
   display: flex;
   justify-content: center;
+  transition: 0.5s ease;
   .Avata {
     display: flex;
     justify-content: center;
@@ -39,7 +40,7 @@
         font-size: var( --fontSize_title);
         font-family: var( --fontFamily);
         font-weight: 800;
-        color: #000
+        color: var(--colorDark);
       }
       .Date {
         position: absolute;
@@ -59,14 +60,17 @@
         font-family: var( --fontFamily);
         font-weight: bold;
         font-size: var( --fontSize_title);
+        color: var(--colorDark);
       }
       .title_mail {
         user-select: all;
         margin-top: 5px;
         font-size: var( --fontSize_title);
         font-family: var( --fontFamily);
+        color: var(--colorDark);
       }
       .welcome {
+        color: var(--colorDark1);
         user-select: none;
         margin-top: 3px;
         font-size: var(--fontSize_title1);

@@ -23,6 +23,7 @@
 #Social_Network {
   display: flex;
   justify-content: center;
+  transition: 0.5s ease;
   .Network {
     width: var(--with_component1);
     height: calc(var(--height_component) * 0.35);
@@ -89,6 +90,7 @@
         font-family: var(--fontFamily);
         font-weight: bold;
         padding: 10px;
+        color: var(--colorDark);
       }
       .phone_profile {
         position: relative;
@@ -105,6 +107,7 @@
             user-select: all;
             margin-left: 20px;
             font-size: var(--fontSize_song1);
+            color: var(--colorDark);
           }
         }
         .bank {

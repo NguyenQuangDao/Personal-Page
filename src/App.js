@@ -39,19 +39,30 @@ function App() {
   const handleListMusic = () => {
     setGetListMusic(!GetListMusic)
   }
-
- 
-
+  ///////////// dark mode //////////////
+  const [darkMode, setDarkMode] = useState(false);
+  const [darkLight, setDarkLight] = useState("light")
+  useEffect(() => {
+    if (darkLight == 'dark') {
+      setDarkLight('light')
+    } else {
+      setDarkLight('dark')
+    }
+    document.getElementById('App').setAttribute('data-theme', darkLight)
+  }, [darkMode])
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode)
+  }
 
   return (
     <div id="App">
-      <Context.Provider value={{ DataSongs, handlePlayMusic, PlayPause_Music, handleListMusic, GetListMusic, song, handleSetSong, handeleShowMusic, showMusic }}>
+      <Context.Provider value={{ DataSongs, handlePlayMusic, PlayPause_Music, handleListMusic, GetListMusic, song, handleSetSong, handeleShowMusic, showMusic, darkMode, handleDarkMode }}>
         <Header />
         <TitleComback />
         <Weather />
-        <Social_Network/>
+        <Social_Network />
         <Music />
-        <Movie/>
+        <Movie />
       </Context.Provider>
     </div>
   );

@@ -8,12 +8,16 @@
   /* height: 100%; */
   margin: 10px auto;
   padding-bottom: 20px;
-  background-color: #f1f2f6;
+  background-color: var(--backgroundALL);
   border-radius: 14px;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  transition: 0.5s ease;
 }
-:root {
+[data-theme="light"] {
+  --backgroundALL: #f1f2f6;
+  --colorDark: #000;
+  --colorDark1: #000;
   --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
   --c: radial-gradient(farthest-side, #269af2 96%, #0000);
   --background_avt: #fbfcff;
@@ -46,4 +50,43 @@
   --fontSize_Icon_Weather: 3.5rem;
   --fontFamily: Arial, Helvetica, sans-serif;
   --colorActive: #848482;
+  --colorActive1: #848482;
+}
+[data-theme="dark"] {
+  --backgroundALL: rgba(0, 0, 0, 0.83);
+  --colorDark: #f1f2f6;
+  --colorDark1: #f1f2f689;
+  --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #fff0);
+  --c: radial-gradient(farthest-side, #269af2 96%, #0000);
+  --background_avt: #16171a;
+  --Backgroud_Song: #125550;
+  --with_height_avt: 70px;
+  --height_component: 180px;
+  --with_component: calc(44vw - 10px);
+  --with_component1: 88vw;
+  --background_title_avt: #f1f2f689;
+  --boderRadius: 18px;
+  --boderRadius50: 50%;
+  --borderWidth: 3px;
+  --boxshadow_titleComeback: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --boxshadow1: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  --boxshadow2: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+  --boxshadow3: rgba(0, 0, 0, 0.07) 0px 1px 1px 0px inset,
+    rgba(0, 0, 0, 0.07) 0px 2px 2px 0px inset,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px 0px inset,
+    rgba(0, 0, 0, 0.07) 0px 8px 8px 0px inset,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px 0px inset;
+  --boxshadow_img_Avt: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  --fontSize_title: 0.75rem;
+  --fontSize_title1: 2.15rem;
+  --fontSize_song: 0.95rem;
+  --fontSize_song1: 1.1rem;
+  --fontSize_song2: 1.4rem;
+  --fontSize_song3: 1.15rem;
+  --fontSize_Icon_Weather: 3.5rem;
+  --fontFamily: Arial, Helvetica, sans-serif;
+  --colorActive: #f1f2f6;
+  --colorActive1: #f1f2f689;
 }

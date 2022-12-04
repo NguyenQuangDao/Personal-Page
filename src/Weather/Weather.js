@@ -158,7 +158,7 @@ function Weather() {
                             </div>
                         </div>
                         <div className="Weather_Api">
-                            <div className="Icon_Weather">
+                            <div className="Icon_Weather_none">
                                 <div className="Cloud_svg">
                                     <img src={imgCloud} id="Cloud_svg" />
                                 </div>

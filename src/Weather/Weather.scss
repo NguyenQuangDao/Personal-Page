@@ -33,6 +33,7 @@
 #Weather {
   margin: 20px auto;
   width: var(--with_component1);
+  transition: 0.5s ease;
   .Weather_Header {
     display: flex;
     justify-content: space-between;
@@ -54,14 +55,15 @@
             font-size: var(--fontSize_song1);
             font-weight: bold;
             font-family: var(--fontFamily);
+            color: var(--colorDark);
           }
           .Note {
             margin: 15px 10px 0px 10px;
             font-size: var(--fontSize_title);
             font-weight: bold;
             font-family: var(--fontFamily);
+            color: var(--colorDark1);
           }
-         
         }
         .Parameter {
           display: flex;
@@ -82,6 +84,7 @@
             .text_foresight {
               margin-left: calc(var(--with_component) / 6.5);
               line-height: 15px;
+              color: var(--colorDark);
             }
           }
         }
@@ -101,6 +104,7 @@
           border-radius: var(--boderRadius);
           border: none;
           outline: none;
+          color: var(--colorDark);
         }
       }
     }
@@ -115,12 +119,39 @@
       .Icon_Weather {
         display: flex;
         justify-content: center;
-        margin-top: 8px;
+        // margin-top: 3px;
         // .icon_cloud {
         //   font-size: var(--fontSize_Icon_Weather);
         //   color: var(--colorActive);
         // }
-        #Cloud_svg{
+        #Cloud_svg {
+          width: 70px;
+          height: 70px;
+        }
+        .icon_weather {
+          width: calc(var(--with_component) / 7);
+          height: calc(var(--with_component) / 7);
+          object-fit: cover;
+          opacity: 0.5;
+          @include respond(tablet) {
+            width: calc(var(--with_component) / 4);
+            height: calc(var(--with_component) / 4);
+          }
+          @include respond(phone) {
+            width: calc(var(--with_component) / 2);
+            height: calc(var(--with_component) / 2);
+          }
+        }
+      }
+      .Icon_Weather_none {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        // .icon_cloud {
+        //   font-size: var(--fontSize_Icon_Weather);
+        //   color: var(--colorActive);
+        // }
+        #Cloud_svg {
           width: 70px;
           height: 70px;
         }
@@ -151,7 +182,7 @@
         }
         .Comment_text_none {
           font-size: var(--fontSize_song);
-          color: var(--colorActive);
+          color: var(--colorActive1);
           font-family: var(--fontFamily);
           margin: 6px 10px 0 10px;
         }
@@ -164,6 +195,7 @@
           font-weight: bold;
           font-family: var(--fontFamily);
           image-rendering: pixelated;
+          color: var(--colorDark);
         }
       }
       .H_or_L_Temperature {

@@ -32,6 +32,7 @@
 #Music {
   width: 100%;
   margin-top: 20px;
+  transition: 0.5s ease;
   .Header_Music {
     user-select: none;
     margin-bottom: 20px;
@@ -101,6 +102,7 @@
           bottom: 15px;
           font-size: var(--fontSize_song3);
           font-weight: bold;
+          color: var(--colorDark);
         }
       }
       .Choose_Music_title {
@@ -127,6 +129,7 @@
             margin-top: 8px;
             font-size: var(--fontSize_song3);
             font-weight: 700;
+            color: var(--colorDark1);
           }
         }
       }
@@ -240,6 +243,7 @@
             margin-left: 15px;
             min-width: calc((var(--with_component1) - 30px) * 0.5);
             font-weight: bold;
+            color: var(--colorDark1);
           }
         }
         .Author_Mysong {
