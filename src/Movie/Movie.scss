@@ -1,0 +1,38 @@
+#Movie {
+  width: var(--with_component1);
+  height: calc(var(--height_component) * 0.35);
+  user-select: none;
+  margin: 0 auto;
+  transition: 0.5s ease;
+  .Find_Movie {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background_avt);
+    border-radius: var(--boderRadius);
+    box-shadow: var(--boxshadow_titleComeback);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .input_search_Movie {
+      // margin-left: calc(var(--with_component1) * 0.07);
+      // .search_icon {
+      //   display: inline;
+      //   margin-left: 10px;
+      //   padding: 10px;
+      //   border-radius: 50%;
+      //   background-color: var(--background_avt);
+      //   box-shadow: var(--boxshadow2);
+      //   .icon_search {
+      //   }
+      // }
+      #search_Movie {
+        width: calc(var(--with_component1) * 0.85);
+        height: calc(var(--height_component) * 0.25);
+        box-shadow: var(--boxshadow3);
+        border-radius: var(--boderRadius);
+        border: none;
+        padding-left: 15px;
+      }
+    }
+  }
+}

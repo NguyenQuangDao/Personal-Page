@@ -67,10 +67,10 @@
             height: calc(var(--with_component) - 65px);
           }
         }
-        .bars-1{
+        .bars-1 {
           left: 15px;
         }
-        .bars-2{
+        .bars-2 {
           right: 15px;
         }
         .bars-1,
@@ -205,6 +205,7 @@
   .Lists_Music {
     width: var(--with_component1);
     height: 300px;
+    display: block;
     margin: 0 auto;
     background-color: var(--background_avt);
     border-radius: var(--boderRadius);
@@ -266,8 +267,11 @@
     visibility: visible;
     transform: translateY(0);
     transition: 0.5s ease;
+    margin-bottom: 10px;
   }
   .inactive {
+    // position: absolute;
+    height: 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-80px);
@@ -280,9 +284,12 @@
     transition: 0.75s ease;
   }
   .inactive1 {
+    // position: absolute;
+    height: 0;
+
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     transition: 0.75s ease;
   }
   .active2 {
@@ -292,9 +299,11 @@
     transition: 0.75s ease;
   }
   .inactive2 {
+    // position: absolute;
+    height: 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(100%);
+    transform: translateX(200%);
     transition: 0.75s ease;
   }
 }

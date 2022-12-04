@@ -141,7 +141,7 @@ function Weather() {
                             <div className="Weather_from">
                                 <div className="Name_Location">
                                     <div className="Note">
-                                        1 số nơi có thể không chứa dấu cách (VD: HaiPhong, BaVi)
+                                        1 số nơi có thể không chứa dấu cách (VD: HaiPhong)
                                     </div>
                                     <div className="dots-7"></div>
                                 </div>
