@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import SnowFlakes from './Share/SnowFlakes/SnowFlakes';
 import Header from './Header/Header';
 import TitleComback from './TItle_comback/TItle_comback';
 import Weather from './Weather/Weather';
@@ -57,12 +58,13 @@ function App() {
   return (
     <div id="App">
       <Context.Provider value={{ DataSongs, handlePlayMusic, PlayPause_Music, handleListMusic, GetListMusic, song, handleSetSong, handeleShowMusic, showMusic, darkMode, handleDarkMode }}>
+        <SnowFlakes />
         <Header />
         <TitleComback />
         <Weather />
         <Social_Network />
         <Music />
-        <Movie />
+        {/* <Movie /> */}
       </Context.Provider>
     </div>
   );

@@ -4,17 +4,20 @@
   box-sizing: border-box;
 }
 #App {
-  width: 94%;
-  /* height: 100%; */
-  margin: 10px auto;
+  width: var(--widthApp);
+  height: 100%;
+  margin: var(--marginApp);
   padding-bottom: 20px;
   background-color: var(--backgroundALL);
-  border-radius: 14px;
+  border-radius: var(--boderRadiusApp);
   scroll-behavior: smooth;
   overflow-x: hidden;
   transition: 0.5s ease;
 }
 [data-theme="light"] {
+  --widthApp: 94%;
+  --marginApp: 15px auto;
+  --boderRadiusApp: 16px;
   --backgroundALL: #f1f2f6;
   --colorDark: #000;
   --colorDark1: #000;
@@ -53,6 +56,9 @@
   --colorActive1: #848482;
 }
 [data-theme="dark"] {
+  --widthApp: 100%;
+  --marginApp: 0 auto;
+  --boderRadiusApp: 0px; 
   --backgroundALL: rgba(0, 0, 0, 0.83);
   --colorDark: #f1f2f6;
   --colorDark1: #f1f2f689;
