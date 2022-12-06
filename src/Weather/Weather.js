@@ -43,6 +43,9 @@ function Weather() {
     //// search location weather //////
     const search = evt => {
         if (evt.key === "Enter") {
+            if(removeAccents(query) === ''){
+                alert('Hãy nhập nơi bạn muốn xem thời tiết')
+            }
             fetch(`${WeatherAPI.apiURL}weather?q=${removeAccents(query)}&unitts=metric&APPID=${WeatherAPI.key}`)
                 .then(res => res.json())
                 .then(result => {

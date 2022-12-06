@@ -6,7 +6,7 @@ import TitleComback from './TItle_comback/TItle_comback';
 import Weather from './Weather/Weather';
 import Social_Network from './Social_Network/Social_Network';
 import Music from './Music/Music';
-import Movie from './Movie/Movie';
+// import Movie from './Movie/Movie';
 import { Context } from './Context';
 import DataSongs from './/Data/Data.json'
 function App() {

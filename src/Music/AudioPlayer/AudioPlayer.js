@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Context } from "../../Context";
+import 'react-h5-audio-player/lib/styles.css';
 import './AudioPlayer'
 import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
 
 export default function Playing() {
     const { song, handleSetSong } = useContext(Context)
@@ -14,7 +14,7 @@ export default function Playing() {
 
     }
     return (
-        <div>
+        <div id="Playing">
             <AudioPlayer
                 // autoPlay
                 src={song.url}
